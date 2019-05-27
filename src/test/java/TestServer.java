@@ -18,9 +18,7 @@ public class TestServer {
 	 public void init() {
 		report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
 		test = report.startTest("ExtentDemo");
-	    System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
-	    driver = new ChromeDriver();
-	    driver.manage().window().maximize();
+	    driver = new HtmlUnitDriver();
 	 }
 
 	 @AfterTest
