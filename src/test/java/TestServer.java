@@ -7,7 +7,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class Test2 {
+public class TestServer {
 	
 	static ExtentTest test;
 	static ExtentReports report;
@@ -15,7 +15,7 @@ public class Test2 {
 	WebDriver driver;
 
 	 @BeforeTest
-	 public void StartBrowser_NavURL() {
+	 public void init() {
 		report = new ExtentReports(System.getProperty("user.dir")+"\\ExtentReportResults.html");
 		test = report.startTest("ExtentDemo");
 	    System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
@@ -24,24 +24,29 @@ public class Test2 {
 	 }
 
 	 @AfterTest
-	 public void CloseBrowser() {
+	 public void end() {
 		 report.endTest(test);
 		 report.flush();
-    	  driver.quit();
+    	 driver.quit();
 	 }
+	 
+	 @Test
+	 public void testLoadBalance() {
+		 driver.get("http://52.172.142.170");
+		 if(driver.getTitle().equals("Apache Tomcat/8.5.41"))
+				 test.log(LogStatus.PASS, "Load balancing is successful");
+
+		 else
+			 test.log(LogStatus.FAIL, "Load Balancing failed");
+	}
 
 	 @Test
-	 public void testToCompareDoubles() {
-		 driver.get("http://104.43.255.181:8888/SpringMVCHibernate");
+	 public void testTitle() {
+		 driver.get("http://52.172.142.170/SpringMVCHibernate");
 		 if(driver.getTitle().equals("Person Page"))
-			 {
-				 test.log(LogStatus.PASS, "Navigated to the specified URL");
-			 }
+				 test.log(LogStatus.PASS, "Project page launched");
+
 		 else
-			 {
-			 	 test.log(LogStatus.FAIL, "Test Failed");
-			 
-			 }
-			 
-			 }
+			 test.log(LogStatus.FAIL, "Unable to launch project page");
+	}
 }

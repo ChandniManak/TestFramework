@@ -2,38 +2,28 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="15943" started-at="2019-05-26T12:00:32Z" finished-at="2019-05-26T12:00:48Z">
+  <suite name="TestServer" duration-ms="7145" started-at="2019-05-27T05:07:06Z" finished-at="2019-05-27T05:07:13Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="15943" started-at="2019-05-26T12:00:32Z" finished-at="2019-05-26T12:00:48Z">
-      <class name="Test1">
-        <test-method status="PASS" signature="StartBrowser_NavURL()[pri:0, instance:Test1@2ed94a8b]" name="StartBrowser_NavURL" is-config="true" duration-ms="4742" started-at="2019-05-26T17:30:32Z" finished-at="2019-05-26T17:30:37Z">
+    <test name="Command line test" duration-ms="7145" started-at="2019-05-27T05:07:06Z" finished-at="2019-05-27T05:07:13Z">
+      <class name="TestServer">
+        <test-method status="PASS" signature="init()[pri:0, instance:TestServer@73f792cf]" name="init" is-config="true" duration-ms="4798" started-at="2019-05-27T10:37:06Z" finished-at="2019-05-27T10:37:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StartBrowser_NavURL -->
-        <test-method status="PASS" signature="StartBrowser_NavURL()[pri:0, instance:Test2@1e67b872]" name="StartBrowser_NavURL" is-config="true" duration-ms="4213" started-at="2019-05-26T17:30:37Z" finished-at="2019-05-26T17:30:41Z">
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testLoadBalance()[pri:0, instance:TestServer@73f792cf]" name="testLoadBalance" duration-ms="315" started-at="2019-05-27T10:37:10Z" finished-at="2019-05-27T10:37:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StartBrowser_NavURL -->
-        <test-method status="PASS" signature="testToCompareDoubles()[pri:0, instance:Test1@2ed94a8b]" name="testToCompareDoubles" duration-ms="2756" started-at="2019-05-26T17:30:41Z" finished-at="2019-05-26T17:30:44Z">
+        </test-method> <!-- testLoadBalance -->
+        <test-method status="PASS" signature="testTitle()[pri:0, instance:TestServer@73f792cf]" name="testTitle" duration-ms="678" started-at="2019-05-27T10:37:11Z" finished-at="2019-05-27T10:37:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testToCompareDoubles -->
-        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:Test1@2ed94a8b]" name="CloseBrowser" is-config="true" duration-ms="1159" started-at="2019-05-26T17:30:45Z" finished-at="2019-05-26T17:30:46Z">
+        </test-method> <!-- testTitle -->
+        <test-method status="PASS" signature="end()[pri:0, instance:TestServer@73f792cf]" name="end" is-config="true" duration-ms="1343" started-at="2019-05-27T10:37:11Z" finished-at="2019-05-27T10:37:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CloseBrowser -->
-        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:Test2@1e67b872]" name="CloseBrowser" is-config="true" duration-ms="1495" started-at="2019-05-26T17:30:46Z" finished-at="2019-05-26T17:30:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CloseBrowser -->
-      </class> <!-- Test1 -->
-      <class name="Test2">
-        <test-method status="PASS" signature="testToCompareDoubles()[pri:0, instance:Test2@1e67b872]" name="testToCompareDoubles" duration-ms="1568" started-at="2019-05-26T17:30:44Z" finished-at="2019-05-26T17:30:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testToCompareDoubles -->
-      </class> <!-- Test2 -->
+        </test-method> <!-- end -->
+      </class> <!-- TestServer -->
     </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+  </suite> <!-- TestServer -->
 </testng-results>
