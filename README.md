@@ -1,3 +1,3 @@
 # TestFramework
 
-A Testing Framework that tests MVC project on Host machine
+A Testing Framework containing smoke tests for MVC project to be executed on Host machine
